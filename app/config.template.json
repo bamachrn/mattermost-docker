@@ -1,6 +1,6 @@
 {
     "ServiceSettings": {
-        "ListenAddress": ":80",
+        "ListenAddress": ":8080",
         "MaximumLoginAttempts": 10,
         "SegmentDeveloperKey": "",
         "GoogleDeveloperKey": "",
@@ -10,7 +10,15 @@
         "EnablePostUsernameOverride": false,
         "EnablePostIconOverride": false,
         "EnableTesting": false,
-        "EnableSecurityFixAlert": true
+        "EnableOpenServer": true,
+        "EnableSecurityFixAlert": true,
+        "SessionLengthWebInDays": 30,
+        "SessionLengthMobileInDays": 30,
+        "SessionLengthSSOInDays": 30,
+        "SessionCacheInMinutes": 10,
+        "WebsocketSecurePort": 443,
+        "WebsocketPort": 8080,
+        "WebserverMode": "regular"
     },
     "TeamSettings": {
         "SiteName": "Mattermost",
@@ -19,7 +27,7 @@
         "EnableUserCreation": true,
         "RestrictCreationToDomains": "",
         "RestrictTeamNames": true,
-        "EnableTeamListing": false
+        "EnableTeamListing": true
     },
     "SqlSettings": {
         "DriverName": "postgres",
@@ -40,7 +48,7 @@
     },
     "FileSettings": {
         "DriverName": "local",
-        "Directory": "/mattermost/data/",
+        "Directory": "/mattermost/config/data/",
         "EnablePublicLink": true,
         "PublicLinkSalt": "A705AklYF8MFDOfcwh3I488G8vtLlVip",
         "ThumbnailWidth": 120,
@@ -57,7 +65,7 @@
     },
     "EmailSettings": {
         "EnableSignUpWithEmail": true,
-        "SendEmailNotifications": false,
+        "SendEmailNotifications": true,
         "RequireEmailVerification": false,
         "FeedbackName": "",
         "FeedbackEmail": "",
